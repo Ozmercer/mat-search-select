@@ -1,0 +1,17 @@
+<mat-form-field class="search-select">
+  <label>{{placeholder}}</label>
+  <mat-select (opened)="onOpenSelect()" [multiple]="multiple" (selectionChange)="onChange($event.value)"
+              [value]="currentValue" class="search-select" #select>
+    <input class="search-bar" type="text" placeholder="Search Pages" (input)="filterList($event.target.value)" autofocus #input
+           [(ngModel)]="inputText" (keydown)="onUp($event)">
+
+    <div class="scroller" #scroller>
+      <mat-option *ngFor="let option of filteredOptions; let i = index" [value]="option" id="option{{i}}"
+                  [ngClass]="{'focused': currentFocus === i}">{{option}}</mat-option>
+    </div>
+
+    <span *ngIf="filteredOptions.length === 0">
+      <p class="no-results"><b>No results</b></p>
+    </span>
+  </mat-select>
+</mat-form-field>
