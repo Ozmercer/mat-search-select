@@ -1,6 +1,5 @@
 <mat-form-field class="search-select">
-  <label>{{placeholder}}</label>
-  <mat-select (opened)="onOpenSelect()" [multiple]="multiple" (selectionChange)="onChange($event.value)"
+  <mat-select [placeholder]="placeholder" (opened)="onOpenSelect()" [multiple]="multiple" (selectionChange)="onChange($event.value)"
               [value]="currentValue" class="search-select" #select>
     <input class="search-bar" type="text" placeholder="Search Pages" (input)="filterList($event.target.value)" autofocus #input
            [(ngModel)]="inputText" (keydown)="onKeyPress($event)">

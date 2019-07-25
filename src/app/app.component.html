@@ -2,10 +2,11 @@
   <app-search-select [placeholder]="placeholder" [currentSelection]="activeOption"
                      (change)="onSelect($event)" [options]="options"></app-search-select>
 
-  <h3>{{activeOption}}</h3>
   <label>Quick select:</label>
   <br>
   <button mat-button color="primary" *ngFor="let option of filteredOptions" (click)="activeOption = option">
     {{option}}
   </button>
+  <hr>
+  <h3>My favorite cheese is {{activeOption}}</h3>
 </div>
