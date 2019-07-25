@@ -19,9 +19,11 @@ export class AppComponent implements OnInit {
   ];
   activeOption: string | string[];
   placeholder = 'Choose option';
+  filteredOptions: string[];
 
   ngOnInit() {
     this.activeOption = this.options[0];
+    this.filteredOptions = this.options.filter((option, index) => index % 2 === 0)
   }
 
   onSelect(selection: string | string[]) {

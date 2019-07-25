@@ -12,7 +12,6 @@ export class SearchSelectComponent implements OnInit {
   @Input() multiple: boolean;
 
   @Input() set currentSelection(s: string | string[]) {
-    console.log(s);
     if (s) {
       this.currentValue = s;
     }
