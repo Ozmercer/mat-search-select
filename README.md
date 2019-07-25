@@ -1,6 +1,23 @@
-# MatSearchSelect
+# Description
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.3.2.
+Component built using Angular Material. This component open a mat-select element that includes a search-bar. Typing in will filter the select options. Navigation between options is possible using UP and DOWN arrow keys, ENTER chooses the seleted option and ESC closes the component.
+
+## API
+
+   // Array of select-options
+  @Input() options: string[];
+  
+  // Placeholder text
+  @Input() placeholder: String;
+  
+  // Use multiple select mode
+  @Input() multiple: boolean;
+  
+  // Choose what option/options are shown as selected
+  @Input() currentSelection: string | string[];
+  
+  // Emits chosen option/options
+  @Output() change: EventEmitter<string | string[]>;
 
 ## Development server
 
