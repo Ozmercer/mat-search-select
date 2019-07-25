@@ -3,7 +3,7 @@
 Component built using Angular Material. This component open a mat-select element that includes a search-bar. Typing in will filter the select options. Navigation between options is possible using UP and DOWN arrow keys, ENTER chooses the seleted option and ESC closes the component.
 
 ## API
-
+`
    // Array of select-options
   @Input() options: string[];
   
@@ -18,6 +18,7 @@ Component built using Angular Material. This component open a mat-select element
   
   // Emits chosen option/options
   @Output() change: EventEmitter<string | string[]>;
+  `
 
 ## Development server
 
