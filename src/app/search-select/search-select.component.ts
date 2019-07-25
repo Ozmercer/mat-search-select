@@ -55,7 +55,7 @@ export class SearchSelectComponent implements OnInit {
     this.input.nativeElement.focus();
   }
 
-  onUp(ev: KeyboardEvent) {
+  onKeyPress(ev: KeyboardEvent) {
     ev.stopPropagation();
     switch (ev.key) {
       case 'Escape':
@@ -77,7 +77,7 @@ export class SearchSelectComponent implements OnInit {
         ev.preventDefault();
         if (this.currentFocus === null) {
           this.currentFocus = 0;
-        } else if (this.currentFocus >= 0 && this.currentFocus < this.scroller.nativeElement.children.length - 1) {
+        } else if (this.currentFocus < this.scroller.nativeElement.children.length - 1) {
           this.currentFocus++;
         } else {
           this.currentFocus = null;
