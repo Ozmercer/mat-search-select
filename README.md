@@ -19,6 +19,12 @@ Component built using Angular Material. This component open a mat-select element
   // Emits chosen option/options
   @Output() change: EventEmitter<string | string[]>;
   ```
+  
+  ### Example
+  ```
+  <app-search-select [placeholder]="placeholder" [currentSelection]="activeOption" [multiple]="true"
+                     (change)="onSelect($event)" [options]="options"></app-search-select>
+  ```
 
 ## Development server
 
