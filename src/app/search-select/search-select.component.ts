@@ -13,7 +13,7 @@ export class SearchSelectComponent implements OnInit {
 
   @Input() set currentSelection(s: string | string[]) {
     if (s) {
-      this.currentValue = s;
+      this.currentValue = (this.multiple && typeof s === 'string') ? [s] : s;
     }
   }
 

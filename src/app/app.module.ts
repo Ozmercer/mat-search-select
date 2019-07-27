@@ -7,11 +7,13 @@ import { MatSelectModule } from '@angular/material/select';
 import {FormsModule} from '@angular/forms';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {MatButtonModule} from '@angular/material';
+import { ArrayToWords } from './pipes/array-to-words.pipe';
 
 @NgModule({
   declarations: [
     AppComponent,
-    SearchSelectComponent
+    SearchSelectComponent,
+    ArrayToWords
   ],
   imports: [
     BrowserModule,

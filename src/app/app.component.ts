@@ -7,7 +7,7 @@ import {Component, OnInit} from '@angular/core';
 })
 export class AppComponent implements OnInit {
   options = [
-    'Default option',
+    '* Default option *',
     'Cheddar',
     'Parmesan',
     'Gorgonzola',
@@ -19,8 +19,10 @@ export class AppComponent implements OnInit {
   activeOption: string | string[];
   placeholder = 'Pick a cheese';
   filteredOptions: string[];
+  isMultiSelect: boolean;
 
   ngOnInit() {
+    this.isMultiSelect = false;
     this.activeOption = this.options[0];
     this.filteredOptions = this.options.filter((option, index) => index % 3 === 1)
   }

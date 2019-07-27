@@ -1,5 +1,5 @@
 <div class="container">
-  <app-search-select [placeholder]="placeholder" [currentSelection]="activeOption"
+  <app-search-select [placeholder]="placeholder" [currentSelection]="activeOption" [multiple]="isMultiSelect"
                      (change)="onSelect($event)" [options]="options"></app-search-select>
 
   <label>Quick select:</label>
@@ -8,5 +8,5 @@
     {{option}}
   </button>
   <hr>
-  <h3>My favorite cheese is {{activeOption}}</h3>
+  <h3>My favorite cheese is {{activeOption | arrayToWords}}</h3>
 </div>
